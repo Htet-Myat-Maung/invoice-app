@@ -1,3 +1,4 @@
+@import url(../node_modules/sweetalert2/dist/sweetalert2.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Padauk:wght@400;700&display=swap');
 @import "tailwindcss";
 
@@ -5,4 +6,12 @@
 
 @theme {
     --font-sans: "Inria Sans", "sans-serif";
+  }
+
+  .swal2-confirm {
+    @apply bg-blue-600 text-white active:bg-blue-400 active:scale-75 active:text-white duration-200 ;
+  }
+  
+  .swal2-cancel {
+    @apply bg-blue-300 text-white active:bg-blue-400 active:scale-75 active:text-white duration-200 ;
   }
