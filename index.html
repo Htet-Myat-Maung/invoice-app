@@ -4,7 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invoice App</title>
+    <!-- Primary Meta Tags -->
+    <title>invoice app</title>
+    <meta name="title" content="invoice app" />
+    <meta name="description" content="" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="invoice app" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="invoice app" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
   </head>
   <body>
     <main id="app" class="flex flex-col h-screen">
@@ -43,7 +62,8 @@
                     type="number"
                     id="quantity"
                     name="quantity"
-                    class="min='1' bg-gray-50 border-0 border-b-2 border-blue-300 text-stone-900 text-sm rounded-lg focus:outline-none focus:ring-blue-300 focus:border-blue-300 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    min="0"
+                    class="bg-gray-50 border-0 border-b-2 border-blue-300 text-stone-900 text-sm rounded-lg focus:outline-none focus:ring-blue-300 focus:border-blue-300 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Your Quantity"
                     required
                   />
@@ -63,33 +83,35 @@
         </div>
 
         <div class="container mx-auto">
-          <div class="relative overflow-x-auto shadow-sm sm:rounded-lg">
+          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table
               class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
             >
-              <thead
-                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+              <thead1
+                class="text-xs text-gray-700 uppercase bg-blue-50 dark:bg-gray-700 dark:text-gray-400"
               >
-                <tr>
+                <tr class="bg-blue-50">
                   <th scope="col" class="px-6 py-3">Product name</th>
                   <th scope="col" class="px-6 py-3 text-end">Price</th>
                   <th scope="col" class="px-6 py-3 text-end">Quantity</th>
                   <th scope="col" class="px-6 py-3 text-end">Cost</th>
                   <th scope="col" class="px-6 py-3 text-end table-cell print:hidden">Action</th>
                 </tr>
-              </thead>
+              </thead1>
               <tbody id="recordList">
 
                 <tr
-                  class="hidden last:table-row border-b dark:border-gray-700"
+                class=" hidden last:table-row border-b dark:border-gray-700"
                 >
-                  <th
+                  <td 
                     scope="row"
                     colspan="5"
-                    class="text-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                  >
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <img src="./image/empty-state.svg" alt="" class="block mx-auto size-40">
+                    <p class="text-center">
                     There is no record yet
-                  </th>
+                    </p>
+                  </td>
                 </tr>
 
                 <tfoot>
